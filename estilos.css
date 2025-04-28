@@ -1,0 +1,375 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem; /* Tamaño base adecuado para la mayoría del contenido */
+    line-height: 1.6; /* Espaciado de línea adecuado para facilitar la lectura */
+    color: #02172a; /* Color base del texto */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.company-name {
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+.navbar {
+    background-color: #02172a !important;
+
+  }
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+
+.nav-item {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.nav-item li {
+    display: inline-block;
+    color: #fff;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-link {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    transform: scale(1.1); 
+    color: crimson; 
+}
+
+
+.icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+/* Carousel Styles */
+.carousel {
+    max-width: 100%;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Card Section */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #02172a;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #02172a;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #02172a;
+    line-height: 1.5;
+}
+
+.portfolio-image {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-image:hover {
+    transform: scale(1.05);
+}
+
+.img-hover-scale {
+    border-radius: 8px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.col-md-4 {
+    width: 31.33%;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #02172a;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-info h4, .footer-links h4, .footer-social h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social .social-icons a {
+    display: block;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-bottom{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom p {
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-item img {
+    height: 600px; 
+    object-fit: cover; 
+    width: 200%; 
+}
+
+.mission-section, .vision-section {
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.mission-section h2, .vision-section h2 {
+    color: #02172a; 
+    font-weight: bold;
+}
+
+h2 {
+    color: #02172a;
+    font-size: 1.75rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%; 
+    }
+
+    .mission-section, .vision-section {
+        margin-bottom: 20px;
+    }
+}
+
+#auth-section .card {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+#auth-section .btn {
+    width: 45%;
+}
+
+#auth-section h2 {
+    font-size: 1.8rem;
+    color: #02172a;
+}
+
+#auth-section form {
+    margin-top: 20px;
+}
+
+.imagen-agenda {
+    width: 300px; /* O el tamaño que tú quieras */
+    display: block;
+    margin: 0 auto 20px auto; /* Centrada y separada hacia abajo */
+  }
+
+  .btn-agendar {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Para que no se parta el texto */
+    
+    text-align: center;   /* <-- CENTRA el texto */
+    display: flex;        /* <-- Para usar flexbox */
+    justify-content: center; /* <-- CENTRA en el eje horizontal */
+    align-items: center;  /* <-- CENTRA en el eje vertical */
+  }
+
+  .btn-agendar:hover {
+    background-color: transparent; /* Fondo transparente al pasar mouse */
+    color: #02172a;; /* Texto cambia al color original */
+    border: 2px solid#02172a; /* Borde se mantiene */
+  }
+
+  .alert-warning {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffc107;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Sección de Música */
+#musica {
+    background-color: #02172a;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#musica h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#musica h5 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#musica iframe {
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1); /* Luz blanca suave */
+    transition: transform 0.3s ease;
+}
+
+#musica iframe:hover {
+    transform: scale(1.05); /* Efecto de agrandar un poquito al pasar el mouse */
+}
+#musica p {
+    color: #ffffff;; /* Puedes cambiar este color al que prefieras */
+    font-size: 1.2rem; /* (Opcional) Ajuste de tamaño si quieres */
+}

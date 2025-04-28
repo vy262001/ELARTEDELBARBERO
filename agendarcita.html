@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL ARTE DEL BARBERO ® | Agendar citas</title>
+    <link rel="icon" href="imagenes/favicon-32x32 barber.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a href="index.html">
+                        <img class="logo" src="imagenes/Whithe.png" alt="Logo El Arte del Barbero" />
+                    </a>
+                    <span class="company-name ms-2">El Arte del Barbero</span>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cortes-y-estilos.html">Cortes y Estilos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agendarcita.html">Agendar Cita</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Quiénes Somos</a></li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-2"><i class="user-icon">👤</i></a>
+                        <a href="#" class="text-white"><i class="cart-icon">🛒</i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container my-5">
+        <div class="card p-4 shadow-lg">
+            <section id="agenda-cita">
+                <img src="imagenes/icon.png" alt="Imagen Agenda tu Cita" class="imagen-agenda">
+            <h1 class="text-center mb-4">Agenda tu Cita</h1>
+            <form id="form-cita">
+                <!-- Paso 1: Sede -->
+                <section class="paso" id="paso-1">
+                    <h4>Elige la sede</h4>
+                    <div class="mb-3">
+                        <select id="sede" class="form-select" required>
+                            <option value="">Selecciona una sede</option>
+                            <option value="Parque 93">Barranquillita</option>
+                            <option value="Avenida 15">Alameda del Río</option>
+                            <option value="Avenida Suba">Boston</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary" onclick="siguientePaso(2)">Siguiente</button>
+                    </div>
+                </section>
+
+                <!-- Paso 2: Servicio -->
+                <section class="paso" id="paso-2" style="display: none;">
+                    <h4>Elige el servicio</h4>
+                    <div class="mb-3">
+                        <select id="servicio" class="form-select" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="Corte de Cabello">Corte de Cabello</option>
+                            <option value="Arreglo de Barba">Arreglo de Barba</option>
+                            <option value="Combo Corte + Barba">Combo Corte + Barba</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" onclick="anteriorPaso(1)">Atrás</button>
+                        <button type="button" class="btn btn-primary" onclick="siguientePaso(3)">Siguiente</button>
+                    </div>
+                </section>
+
+                <!-- Paso 3: Fecha y hora -->
+                <section class="paso" id="paso-3" style="display: none;">
+                    <h4>Elige fecha y hora</h4>
+                    <div class="mb-3">
+                        <input type="date" id="fecha" class="form-control mb-2" required>
+                        <input type="time" id="hora" class="form-control" required>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" onclick="anteriorPaso(2)">Atrás</button>
+                        <button type="button" class="btn btn-primary" onclick="siguientePaso(4)">Siguiente</button>
+                    </div>
+                </section>
+
+                <!-- Paso 4: Datos personales -->
+                <section class="paso" id="paso-4" style="display: none;">
+                    <h4>Tus datos</h4>
+                    <div class="mb-3">
+                        <input type="text" id="nombre" class="form-control mb-2" placeholder="Nombre completo" required>
+                        <input type="tel" id="telefono" class="form-control mb-2" placeholder="Teléfono" required>
+                        <input type="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" onclick="anteriorPaso(3)">Atrás</button>
+                        <button type="button" class="btn btn-primary" onclick="siguientePaso(5)">Siguiente</button>
+                    </div>
+                </section>
+
+                <!-- Paso 5: Confirmación -->
+                <section class="paso" id="paso-5" style="display: none;">
+                    <h4>Confirmar Cita</h4>
+                    <div id="resumen-cita" class="mb-3"></div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" onclick="anteriorPaso(4)">Atrás</button>
+                        <button type="submit" class="btn btn-success">Confirmar Reserva</button>
+                    </div>
+                </section>
+            </form>
+
+            <div id="mensaje-final" style="display:none;" class="text-center mt-4">
+                <h2>🎉 ¡Cita Agendada!</h2>
+                <p>Te esperamos en nuestra barbería.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
